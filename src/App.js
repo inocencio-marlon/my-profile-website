@@ -180,7 +180,7 @@ function MainContent({ setActiveSection }) {
           <FaEnvelope className="section-icon" /> Contact Me
         </h2>
         <div className="contact-content">
-          <p className="contact-email">Email: inocenciomarlon520@gmail.com</p>
+          <p className="contact-email">Email: marlon.inocencio@example.com</p>
           <div className="social-links">
             <a href="https://github.com/marlon-inocencio" target="_blank" rel="noreferrer" className="social-link">
               <i className="fab fa-github"></i> GitHub
