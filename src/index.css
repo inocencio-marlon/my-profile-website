@@ -9,7 +9,138 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Make the code font responsive */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header, main, footer {
+  padding: 20px;
+}
+
+/* Ensure the content scales responsively */
+.main-content {
+  padding: 30px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.hero-section {
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li {
+  display: inline;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-list a.active {
+  color: #007bff;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive typography */
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .nav-list {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack navigation links vertically on small screens */
+  .nav-list {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-content, .education-section, .contact-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .projects-grid {
+    display: block;
+  }
+
+  .project-card {
+    margin-bottom: 15px;
+  }
+
+  .contact-email {
+    font-size: 1rem;
+  }
 }
