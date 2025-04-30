@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+/* Variables */
+:root {
+  --primary-bg: #1e1e2f;
+  --accent: #ffd369;
+  --text-color: #333;
+  --section-bg: #ffffff;
+  --body-bg: #f4f4f9;
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
+  --transition: 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Header */
+header {
+  background-color: var(--primary-bg);
+  padding: 1rem 0;
   color: white;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
 }
 
-.App-link {
-  color: #61dafb;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition);
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--accent);
+  outline: none;
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  background-color: var(--section-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-4px);
+}
+
+section h2 {
+  border-left: 6px solid var(--accent);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  color: #222;
+  font-size: 1.5rem;
+}
+
+section ul {
+  padding-left: 1.2rem;
+}
+
+section a {
+  color: var(--primary-bg);
+  font-weight: 500;
+  text-decoration: none;
+  transition: text-decoration var(--transition);
+}
+
+section a:hover,
+section a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-bg);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  main {
+    padding: 1rem;
   }
+
+  section {
+    padding: 1.5rem;
+  }
+}
+
+.education-item {
+  transition: box-shadow 0.3s ease;
+}
+.education-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
